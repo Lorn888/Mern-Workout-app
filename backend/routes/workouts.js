@@ -3,7 +3,9 @@ const express = require('express')
 //instanse of the router
 const router = express.Router()
 
-//attatching a handler. When the request comes in it fires up some function 
-router.get('/', () => {})
+//Gets all workouts
+router.get('/', (req, res) => {
+    res.json({mssg: 'GET all workouts'})
+})
 
 module.exports = router

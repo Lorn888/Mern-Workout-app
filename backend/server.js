@@ -12,6 +12,10 @@ app.use((req,res,next) => {
 })
 
 
+//routes from the router file
+// when we fire a request to this route than get me these qorkoutRoutes
+app.use('/api/workouts', workoutRoutes)
+
 //listen for request
 app.listen(process.env.PORT, () =>{
     console.log('listening on port 7000')
