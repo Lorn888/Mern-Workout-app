@@ -1,5 +1,7 @@
-const express = require ('express')
 require('dotenv').config()
+
+const workoutRoutes = require('./routes/workouts')
+const express = require ('express')
 //express app
 const app = express()
 
@@ -7,12 +9,6 @@ const app = express()
 app.use((req,res,next) => {
     console.log(req.path, req.method)
     next()
-})
-
-
-//routes
-app.get('/', (req, res) =>{
-    res.json({mssg: 'Welcome to the app'})
 })
 
 
