@@ -20,3 +20,5 @@ const workoutSchema = new Schema ({
 //Second adds a timestamp
 
 { timestamps: true }) 
+
+module.exports = mongoose.model('Workout', workoutSchema)
